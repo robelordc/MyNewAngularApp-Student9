@@ -34,7 +34,7 @@ jobs:
     # - run: npm test
       
     - name: Deploy
-      run:  npm run build --prod
+      run:  ng deploy --base-href=https://robelordc.github.io/MyNewAngularApp-Student9/
 
           # folder: dis
     # - name: Deploy 🚀
