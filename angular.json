@@ -64,8 +64,7 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "myNewApp-Student9:build",
-			                  "port": 443
+            "browserTarget": "myNewApp-Student9:build"			        
           },
           "configurations": {
             "production": {
