@@ -34,7 +34,7 @@ jobs:
     # - run: npm test
       
     - name: Deploy
-      run:  npm run build && npm run pack
+      run:  ng build --prod
 
           # folder: dis
     # - name: Deploy 🚀
