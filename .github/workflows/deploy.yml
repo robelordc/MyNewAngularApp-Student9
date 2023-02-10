@@ -2,6 +2,8 @@ name: Build and Deploy
 on: [push]
 permissions:
   contents: write
+    branches:
+      - main  
 jobs:
   build-and-deploy:
     concurrency: ci-${{ github.ref }} # Recommended if you intend to make multiple deployments in quick succession.
@@ -31,13 +33,16 @@ jobs:
           ls -la
     # - run: npm test
       
-    # - name: Deploy
-    #   run: npm run build --prod
-    - name: Deploy 🚀
-      uses: JamesIves/github-pages-deploy-action@v4.4.1
+    - name: Deploy
+      run: npm run build --production
       with:
-          branch: gh-pages
-          folder: dist # The folder the action should deploy.
+          branch: deploy
+          # folder: dis
+    # - name: Deploy 🚀
+    #   uses: JamesIves/github-pages-deploy-action@v4.4.1
+    #   with:
+    #       branch: gh-pages
+    #       folder: dist # The folder the action should deploy.
 
 
 # name: Build and Deploy
